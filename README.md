@@ -2,9 +2,12 @@
 A simples flask code transform in .exe and run with ChromeApp
 
 You need to this project -> Python, Flask, PyInstaller and pymysql
-Know the basic in HTML, CSS and JavaScript (recommended Jquery and Bootstrap or another which framework you perfer)
 
-Tree:
+    Your Database, use witch better for you, in this project, I used MySQL. Works with all accept by Python!
+
+    Know the basic in HTML, CSS and JavaScript (recommended Jquery and Bootstrap or another which framework you perfer)
+
+Tree folder:
 
     app
       - app.py (main)
