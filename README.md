@@ -1,7 +1,7 @@
 # Flask-with-ChromeApp
 A simples flask code transform in .exe and run with ChromeApp
 
-You need to this project -> Python, Flask, PyInstaller and pymysql
+You need to this project -> Python, Flask, PyInstaller and (pymysql, this for MySQL, you can change this!)
 
     Your Database, use witch better for you, in this project, I used MySQL. Works with all accept by Python!
 
