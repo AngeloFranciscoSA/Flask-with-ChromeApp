@@ -1,7 +1,7 @@
 # Flask-with-ChromeApp
 A simple flask code transformed in one "app.exe" and run with ChromeApp
 
-# TO UNDERSTAND THIS PROJECT, YOU NEED TO KNOW, PYTHON AND BASIC HTML!!!
+# TO UNDERSTAND THIS PROJECT, YOU NEED TO KNOW, BASIC PYTHON AND HTML!!!
     I tried to explain everything, but some doubt, go searching is not so complicated!
 
 You need to this project -> Python, Flask, PyInstaller and (pymysql, this for MySQL, you can change this!)
