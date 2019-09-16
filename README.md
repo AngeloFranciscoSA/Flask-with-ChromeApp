@@ -5,7 +5,10 @@ You need to this project -> Python, Flask, PyInstaller and (pymysql, this for My
 
     Your Database, use witch better for you, in this project, I used MySQL. Works with all accept by Python!
 
-    Know the basic in HTML, CSS and JavaScript (recommended Jquery and Bootstrap or another which framework you perfer)
+    Know the basic in HTML, CSS and JavaScript to use Flask.
+     For the Framework:
+        - Strongly recommended Jquery and Materialize (I used it in this project)
+        - You can change for another, it's your choice!
 
 Tree folder:
 
