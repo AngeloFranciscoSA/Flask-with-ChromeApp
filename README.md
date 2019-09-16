@@ -1,5 +1,5 @@
 # Flask-with-ChromeApp
-A simples flask code transform in .exe and run with ChromeApp
+A simple flask code transformed in one "app.exe" and run with ChromeApp
 
 # TO UNDERSTAND THIS PROJECT, YOU NEED TO KNOW, PYTHON AND BASIC HTML!!!
     I tried to explain everything, but some doubt, go searching is not so complicated!
