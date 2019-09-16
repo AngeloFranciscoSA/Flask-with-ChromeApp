@@ -48,7 +48,9 @@ Comments:
     Flask is simple!
   
 # TO RUN:
-      
+
+   *ALL THE STEPS INSIDE COMMAND PROMPT*
+   
     Start with venv.
         on your promp, type: "pip install virtualenv" to install.
         next "virtualenv venv", to create.
@@ -59,16 +61,17 @@ Comments:
                 "venv\Scripts\activate"
                 
     Install all pip extensions.
-        
-    Config the FLASK APP:
-        - Windowns:
-            "set FLASK_APP=app.py"
-                
-        - Linux and MAC/OS:
-            "export FLASK_APP=app.py"
-                
-    To start the project:
-        - run: "flask run"
+    
+    Inside the folder "app"
+        Set up the FLASK APP:
+            - Windowns:
+                "set FLASK_APP=app.py"
+
+            - Linux and MAC/OS:
+                "export FLASK_APP=app.py"
+
+        To start the project:
+            - run: "flask run"
         
     Optional:
         to turn flask in the DEBUG mode.
