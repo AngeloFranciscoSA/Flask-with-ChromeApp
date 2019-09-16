@@ -21,6 +21,7 @@ Tree:
       
 For PyInstaller you need compile the code on Python 3.X until 3.6 (not working 3.7)
   - pyinstaller --onefile --windowed --add-data "templates;templates" --add-data "static;static" --icon=favicon.ico app.py
+  
         --onefile (create only .exe)
         --windowed (not open cmd viewer)
         --add-data (import the templates and static folders to .exe)
