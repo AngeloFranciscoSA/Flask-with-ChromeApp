@@ -6,18 +6,18 @@ Know the basic in HTML, CSS and JavaScript (recommended Jquery and Bootstrap or 
 
 Tree:
 
-  app
-    - app.py (main)
-    - options.py (settings DB)
-    - storage.py (connection with MySQL Database, CRUD)
+    app
+      - app.py (main)
+      - options.py (settings DB)
+      - storage.py (connection with MySQL Database, CRUD)
     
-    templates (HTML Template)
-      - base.html (base for the Header and footer)
-      - index.html (Login)
-      - blog.html (Principal page)
-      
-    static (stay image)
-      - Nothing for now...
+      templates (HTML Template)
+        - base.html (base for the Header and footer)
+        - index.html (Login)
+        - blog.html (Principal page)
+
+      static (stay image)
+        - Nothing for now...
       
 For PyInstaller you need compile the code on Python 3.X until 3.6 (not working 3.7)
   - pyinstaller --onefile --windowed --add-data "templates;templates" --add-data "static;static" --icon=favicon.ico app.py
