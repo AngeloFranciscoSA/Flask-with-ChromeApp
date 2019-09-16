@@ -38,7 +38,7 @@ For PyInstaller you need compile the code on Python 3.X until 3.6 (not working 3
 
 Comments:
     
-    I use a method to most compact the project is, do all the thing in on page.
+    I use a method to most compact the project is, doing all the same page.
     You can create more pages!
     Just using the render_template() and redirect() in FLASK!
     Flask is simple!
