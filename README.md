@@ -46,7 +46,34 @@ Comments:
     You can create more pages!
     Just using the render_template() and redirect() in FLASK!
     Flask is simple!
-    
-    To turn on DEBUG mode:
-        set FLASK_ENV=development on windows
-        export FLASK_ENV=development on LINUX
+  
+# TO RUN:
+      
+    Start with venv.
+        on your promp, type: "pip install virtualenv" to install.
+        next "virtualenv venv", to create.
+        active:
+            - MAC/OS and LINUX:
+                "source venv/bin/activate"
+            - Windows:
+                "venv\Scripts\activate"
+                
+    Install all pip extensions.
+        
+    Config the FLASK APP:
+        - Windowns:
+            "set FLASK_APP=app.py"
+                
+        - Linux and MAC/OS:
+            "export FLASK_APP=app.py"
+                
+    To start the project:
+        - run: "flask run"
+        
+    Optional:
+        to turn flask in the DEBUG mode.
+            - This mode will update the code automatically
+            
+            To turn on DEBUG mode:
+                "set FLASK_ENV=development" on windows
+                "export FLASK_ENV=development" on LINUX
