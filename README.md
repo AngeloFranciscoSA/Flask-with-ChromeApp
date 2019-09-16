@@ -27,6 +27,10 @@ Tree folder:
 
       static (stay image)
         - Nothing for now...
+    
+    venv (so necessary)
+     _This is a Virtual Environment on Python!
+    
       
 For PyInstaller you need compile the code on Python 3.X until 3.6 (not working 3.7)
   - pyinstaller --onefile --windowed --add-data "templates;templates" --add-data "static;static" --icon=favicon.ico app.py
@@ -42,3 +46,7 @@ Comments:
     You can create more pages!
     Just using the render_template() and redirect() in FLASK!
     Flask is simple!
+    
+    To turn on DEBUG mode:
+        set FLASK_ENV=development on windows
+        export FLASK_ENV=development on LINUX
