@@ -1,6 +1,9 @@
 # Flask-with-ChromeApp
 A simples flask code transform in .exe and run with ChromeApp
 
+# TO UNDERSTAND THIS PROJECT, YOU NEED TO KNOW, PYTHON AND BASIC HTML!!!
+    I tried to explain everything, but some doubt, go searching is not so complicated!
+
 You need to this project -> Python, Flask, PyInstaller and (pymysql, this for MySQL, you can change this!)
 
     Your Database, use witch better for you, in this project, I used MySQL. Works with all accept by Python!
@@ -32,3 +35,10 @@ For PyInstaller you need compile the code on Python 3.X until 3.6 (not working 3
         --windowed (not open cmd viewer)
         --add-data (import the templates and static folders to .exe)
         --icon (just put a icon on your .exe)
+
+Comments:
+    
+    I use a method to most compact the project is, do all the thing in on page.
+    You can create more pages!
+    Just using the render_template() and redirect() in FLASK!
+    Flask is simple!
