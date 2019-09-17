@@ -1,0 +1,140 @@
+{% extends "car_base.html" %}
+{% block content %}
+<script>
+  $(document).ready(function()
+  {
+    M.AutoInit();
+
+    $("#edit").click(function()
+    {
+        var id = $("#edit").val();
+
+        $.post("{{ url_for('consult_edit') }}",
+        {
+            id:id
+        },
+        function(data)
+        {
+            $("#id_car").val(data.id_car);
+            $("#name_car").val(data.name_car);
+            $("#model").val(data.model);
+            $("#year").val(data.year);
+            $("#price").val(data.price);
+        })
+        
+    });
+
+    $("#submit_edit").click(function(){
+        
+        var id          = $("#id_car").val();
+        var name_car    = $("#name_car").val();
+        var model       = $("#model").val();
+        var year        = $("#year").val();
+        var price       = $("#price").val();
+
+        $.post("{{ url_for('edit') }}",
+        {
+            id:id,
+            name_car:name_car,
+            model:model,
+            year:year,
+            price:price
+        },
+        function(data)
+        {
+            M.toast({html:"Change with success", classes: 'rounded'});
+        })
+    });
+
+    $("#delete").click(function(){
+
+        var id = $("#delete_car").val();
+
+        $.post("{{ url_for('delete') }}",
+        {
+            id:id
+        },
+        function(data)
+        {
+            M.toast({html:"Delete with success", classes: 'rounded'});
+        })
+    })
+  });
+</script><br>
+    <div id="modal_edit" class="modal">
+        <div class="modal-content">
+            <h4 class="modal-title">Edit Car</h4>
+
+                <label for="id">ID:</label>
+                <input type="text" class="form-control" id="id_car" name="id_car" disabled>
+
+                <label for="name_car">Name:</label>
+                <input type="text" class="form-control" id="name_car" name="name_car" required>
+
+                <label for="model">Model:</label>
+                <input type="text" class="form-control" id="model" name="model" required>
+
+                <label for="year">Year:</label>
+                <input type="text" class="form-control" id="year" name="year" required>
+
+                <label for="price">Price:</label>
+                <input type="text" class="form-control" id="price" name="price" required>
+              </div>
+        <div class="modal-footer">
+          <button type="button" class="modal-close waves-effect light-green darken-3 btn" id="submit_edit">Edit</button>
+          <button type="button" class="modal-close waves-effect red darken-3 btn">Close</button>
+        </div>
+      </div>
+    </div>
+
+   <div id="modal_check" class="modal">
+      <div class="modal-content">
+          <h3 style="text-align: center">Confirm Delete</h3>
+          <br>
+          <h6 style="margin:10px">Are you sure it's correct?</h6>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="modal-close waves-effect light-green darken-3 btn" id="delete">DELETE</button>
+        <button type="button" class="modal-close waves-effect red darken-3 btn">Close</button>
+      </div>
+    </div>
+
+  <div class="container">
+    <h2 style="text-align:center;">Car's PORTAL</h2>
+    <br>
+    <form method="POST" action="{{url_for('home')}}">
+        <div style="margin: 10px">
+            <label for="car" class="mr-sm-2">CAR:</label>
+            <input type="text" class="form-control mb-2 mr-sm-2" id="car" name="car">
+        </div>
+            <button type="submit" class="btn btn-primary mb-2 tooltipped" id="submit" data-tooltip="Press to search something!" data-position="top" style="float:right;">Search</button>
+    </form>
+  </div>
+    <br><br><br>
+    <table class="responsive-table" id="records_table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Model</th>
+          <th>Year</th>
+          <th>Price</th>
+          <th width="10%">Edit</th>
+          <th width="10%">Delete</th>
+        </tr>
+      </thead>
+      <tbody id="table_body">
+          {% for s in data %}
+            <tr>
+            <td>{{s["id_car"]}}</td>
+            <td>{{s["name_car"]}}</td>
+            <td>{{s["model"]}}</td>
+            <td>{{s["year"]}}</td>
+            <td>{{s["price"]}}</td>
+            <td><button type="button" class="waves-effect orange darken-1 btn modal-trigger" href="#modal_edit" id="edit" name="edit" value="{{s["id_car"]}}">Edit</button></td>
+            <td><button type="button" class=" waves-effect red darken-4 btn modal-trigger" href="#modal_check" id="delete_car" value="{{s["id_car"]}}">Delete</button></td>
+            </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+{% endblock %}

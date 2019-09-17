@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- here we call the static folder, and call the file, logo.png -->
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <!-- here, the {{ title }} will catch the parament TITLE, we passed on app.py in INDEX CODE-->
+        <title>{{ title }}</title>
+      <style>
+            body{
+                display: flex;
+                min-height: 100vh;
+                flex-direction: column;
+            }
+            main{
+                flex: 1 0 auto;
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+                M.AutoInit();
+            });
+        </script>
+    </head>
+    <body>
+        <!-- This BLOCK CONTENT, IS THE ALL BODY CONTENT STAY, using this we can use one header and footer in all pages-->
+        {% block content %}{% endblock %}
+        <footer class="page-footer">
+                <div class="footer-copyright">
+                    <div class="container">
+                        © 2014 Copyright Text
+                        <a class="grey-text text-lighten-4 right" href="login.html">Login</a>
+                    </div>
+                </div>
+            </footer>
+    </body>
+</html>

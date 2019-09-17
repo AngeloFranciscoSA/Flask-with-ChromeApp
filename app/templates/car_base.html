@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Car</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <div>
+        <button data-target="slide-out" class="sidenav-trigger show-on-large waves-effect btn-flat" style="float: left;margin-top: 12px"><i class="material-icons" style="font-size: 45px">menu</i></button>
+    </div>
+        <ul id="slide-out" class="sidenav">
+            <li><div class="user-view">
+                <div class="background">
+                    <img src="{{ url_for('static',filename='office.jpg' )}}">
+                </div>
+                    <img class="circle" src="{{ url_for('static',filename='admin.jpg' )}}">
+                    <span class="white-text name" id="name"></span>
+                    <span class="white-text email"id="email"></span>
+                </div></li>
+                <li><a class="subheader"><i class="material-icons">edit</i>Principal Tasks</a></li>
+                <li><a href="{{url_for('register')}}">Register new Car</a></li>
+                <li><a href="{{url_for('home')}}">Consult Car</a></li>
+                <li><div class="divider"></div></li>
+                <li><a class="subheader"><i class="material-icons">settings</i>Settings</a></li>
+                <li><a href="{{url_for('logout')}}" class="logout" id="logout">Logout</a></li>
+        </ul>
+    <br>
+    {% block content %}{% endblock %}
+</body>
+</html>

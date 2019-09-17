@@ -1,0 +1,33 @@
+{% extends "car_base.html" %}
+{% block content %}
+<script>
+  $(document).ready(function()
+  {
+    M.AutoInit();
+  });
+</script><br>
+  <div class="container">
+    <h2 style="text-align:center;">Register a new car</h2>
+    <br>
+    <form method="POST" action="{{url_for('register')}}">
+        <div style="margin: 10px">
+            <label for="name" class="mr-sm-2">Car's name:</label>
+            <input type="text" class="form-control mb-2 mr-sm-2" id="name_car" name="name_car">
+        </div>
+        <div style="margin: 10px">
+                <label for="model" class="mr-sm-2">Model:</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="model" name="model">
+        </div>
+        <div style="margin: 10px">
+                <label for="year" class="mr-sm-2">Year:</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="year" name="year">
+        </div>
+        <div style="margin: 10px">
+                <label for="price" class="mr-sm-2">Price:</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" id="price" name="price" placeholder="U$">
+        </div>
+            <button type="submit" class="btn btn-primary mb-2 tooltipped" id="submit" data-tooltip="Register!" data-position="top" style="float:right;">Submit</button>
+    </form>
+  </div>
+    <br><br><br>
+{% endblock %}

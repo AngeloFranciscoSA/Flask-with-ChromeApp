@@ -1,0 +1,33 @@
+{% extends "index_base.html" %}
+{% block content %}
+<header>
+        <nav>
+            <div class="nav-wrapper">
+                <ul id="nav-mobile" class="left hide-on-med-and-down"></ul>
+            </div>
+        </nav>
+</header>
+<main>
+    <!-- Only thing important here is the {{ url_for }}, this will redirect to our URL login, to do the login -->
+    <form method="POST" action="{{ url_for('login') }}">
+        <div class="container z-depth-3" style="border-radius: 8px; align-items: center; margin-top:10%;"><p></p>
+            <div class="row">
+                    <div class="row">
+                        <h3 class="center-align" style="margin-bottom:3%; ">Login</h3>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input type="text" class="validate" name="username" id="username">
+                        <label for="username">Login</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">lock</i>
+                        <input  type="password" class="validate" name="password" id="password">
+                        <label for="password">Password</label>
+                    </div>
+                        <button class="btn waves-effect waves-light" style="float:right; margin-right: 15px; margin-top:10px" type="submit" id="submit">Login</button>
+                    </div>
+            </div>
+        </div>
+    </form>
+</main>
+{% endblock %}
