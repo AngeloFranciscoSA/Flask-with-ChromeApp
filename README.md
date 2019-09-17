@@ -19,14 +19,20 @@ Tree folder:
       - app.py (main)
       - options.py (settings DB)
       - storage.py (connection with MySQL Database, CRUD)
+      - reg.py (catch chrome path)
+      - car_bd.sql (sql file with Database Syntax)
     
       templates (HTML Template)
-        - base.html (base for the Header and footer)
+        - index_base.html (base for the Header and footer in index)
         - index.html (Login)
-        - blog.html (Principal page)
+        - car.html (Principal page/ Consult, Edit and Delete)
+        - car_base.html (base for the Header and footer in car and new_car)
+        - new_car.html (Register page/ Insert)
 
       static (stay image)
-        - Nothing for now...
+        - admin.jpg (pricipal image)
+        - favicon.jpg (icon to app.exe)
+        - office.jpg (backgroun on menu tab)
     
     venv (so necessary)
      _This is a Virtual Environment on Python!
