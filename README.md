@@ -5,7 +5,8 @@ A simple flask code transformed in one "app.exe" and run with ChromeApp
     I tried to explain everything, but some doubt, go searching is not so complicated!
 
 You need to this project -> Python, Flask, PyInstaller and pymysql.
--> pymysql, is only for MySQL, you can change this if you use any other type of database.
+    
+    * pymysql, is only for MySQL, you can change this if you use any other type of database.
 
     Your Database, use witch better for you, in this project, I used MySQL. Works with all accept by Python!
 
